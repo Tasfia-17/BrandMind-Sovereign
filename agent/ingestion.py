@@ -45,7 +45,7 @@ def _scrape(url: str) -> str:
     for tag in soup(["script", "style", "nav", "footer", "head"]):
         tag.decompose()
     text = re.sub(r"\s+", " ", soup.get_text(separator=" ")).strip()
-    return text[:4000]
+    return text[:6000]
 
 
 def _extract_profile(website_text: str, url: str) -> BrandProfile:
