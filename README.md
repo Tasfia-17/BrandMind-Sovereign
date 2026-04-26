@@ -1,5 +1,7 @@
 # BrandMind Sovereign
 
+**AgentHansa:** https://www.agenthansa.com/experts/brandmind-sovereign
+
 Autonomous multimodal brand voice agent. Audits brand compliance, generates campaign kits (copy + image + audio), builds audio personas, and remediates brand violations. Memory persists across sessions using Mem0 vector store.
 
 ## What It Does
