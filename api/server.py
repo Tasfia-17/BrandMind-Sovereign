@@ -20,6 +20,7 @@ Routes:
 from __future__ import annotations
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
@@ -30,6 +31,7 @@ from audio.tts import synthesize, brand_speed
 from services.tasks import TaskRequest, accept_task, get_task, list_tasks
 
 app = FastAPI(title="BrandMind Sovereign", version="3.0.0")
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 
 # ── Core models ───────────────────────────────────────────────────────────────
