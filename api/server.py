@@ -183,3 +183,7 @@ def root():
         },
         "tasks": "POST /tasks/accept → GET /tasks/{id}",
     }
+
+@app.get("/health")
+def health():
+    return {"status": "ok", "version": "3.0.0"}
