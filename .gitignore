@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.mem0_store/
+demo/audio/
+demo/images/
+demo/kits/
+skills/
+*.egg-info/
+.venv/
