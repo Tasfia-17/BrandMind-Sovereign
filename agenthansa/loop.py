@@ -157,7 +157,7 @@ def run_loop() -> None:
     print(f"Listening for tasks at {API}/api/experts/updates\n")
 
     cursor = 0
-    with httpx.Client(timeout=70) as http:
+    with httpx.Client(timeout=90) as http:
         while True:
             try:
                 r = http.get(
