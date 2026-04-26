@@ -38,7 +38,7 @@ class BrandProfile(BaseModel):
 def _scrape(url: str) -> str:
     """Fetch and clean website text. Returns up to 4000 chars."""
     headers = {"User-Agent": "Mozilla/5.0 (compatible; BrandMind/1.0)"}
-    resp = httpx.get(url, headers=headers, timeout=15, follow_redirects=True)
+    resp = httpx.get(url, headers=headers, timeout=20, follow_redirects=True)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
     # Remove noise
