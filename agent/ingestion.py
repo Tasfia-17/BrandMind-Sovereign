@@ -105,3 +105,9 @@ def ingest_brand(url: str, brand_id: str | None = None) -> tuple[BrandProfile, B
     memory.store(f"Brand voice summary: {profile.tone_summary}")
 
     return profile, memory
+
+
+def sanitize_brand_id(brand_id: str) -> str:
+    """Normalize brand_id to safe slug format."""
+    import re
+    return re.sub(r"[^a-z0-9_]", "_", brand_id.lower())[:40]
