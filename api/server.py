@@ -189,3 +189,8 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok", "version": "3.0.0"}
+
+@app.on_event("startup")
+async def startup():
+    print("BrandMind Sovereign v3.0 started")
+    print("AgentHansa profile: https://www.agenthansa.com/experts/brandmind-sovereign")
