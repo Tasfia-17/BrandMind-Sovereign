@@ -180,10 +180,10 @@ def run_loop() -> None:
 
             except httpx.HTTPStatusError as e:
                 print(f"\n✗ HTTP {e.response.status_code}: {e.response.text[:100]}")
-                time.sleep(5)
+                time.sleep(3)
             except Exception as e:
                 print(f"\n✗ Error: {e}")
-                time.sleep(5)
+                time.sleep(3)
 
 
 if __name__ == "__main__":
