@@ -26,3 +26,9 @@ dependencies = [
     "pydantic==2.11.3",
     "x402[httpx,evm]==2.8.0",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
