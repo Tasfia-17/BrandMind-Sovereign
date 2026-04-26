@@ -15,7 +15,7 @@ OUTPUT_DIR = Path(__file__).parent.parent / "demo" / "images"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def generate_image(prompt: str, filename: str, size: str = "landscape_4_3") -> Path:
+def generate_image(prompt: str, filename: str, size: str = "square_hd") -> Path:
     """
     Generate an image via fal.ai flux-schnell.
     Returns local path to saved PNG.
