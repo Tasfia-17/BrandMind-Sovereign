@@ -33,6 +33,7 @@ def assemble_kit(
         if audio_path and Path(audio_path).exists():
             zf.write(audio_path, f"audio/{Path(audio_path).name}")
 
+        zf.writestr("manifest.json", f'{"brand_id": "{brand_id}", "generated": "{ts}", "version": "3.0.0"}')
         zf.writestr("README.md", f"""# BrandMind Campaign Kit
 Brand: {brand_id}
 Generated: {ts}
