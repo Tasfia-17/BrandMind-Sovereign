@@ -38,6 +38,7 @@ def synthesize(
     config = TTSConfig(
         prosody=Prosody(speed=speed, volume=volume),
         format="mp3",
+        streaming=False,
         latency="balanced",
         **({"reference_id": ref_id} if ref_id else {}),
     )
