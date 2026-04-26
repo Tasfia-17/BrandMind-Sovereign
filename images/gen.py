@@ -30,6 +30,8 @@ def generate_image(prompt: str, filename: str, size: str = "square_hd") -> Path:
         timeout=30,
     )
     resp.raise_for_status()
+    if not data.get("images"):
+        raise ValueError("fal.ai returned no images")
     data = resp.json()
     image_url = data["images"][0]["url"]
 
