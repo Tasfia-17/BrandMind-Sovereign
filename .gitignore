@@ -8,3 +8,4 @@ demo/kits/
 skills/
 *.egg-info/
 .venv/
+*.zip
