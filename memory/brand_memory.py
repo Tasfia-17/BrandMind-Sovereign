@@ -77,7 +77,7 @@ class BrandMemory:
 
     # ── Read ──────────────────────────────────────────────────────────────────
 
-    def recall(self, query: str, limit: int = 8) -> list[dict]:
+    def recall(self, query: str, limit: int = 10) -> list[dict]:
         """Semantic search over stored brand memories."""
         results = self._mem.search(query, user_id=self.brand_id, limit=limit)
         # mem0 returns {"results": [...]} or a list depending on version
