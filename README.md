@@ -182,3 +182,11 @@ brandmind/
         cli.py          rich CLI demo runner
     main.py             entry point
 ```
+
+## Docker
+
+```bash
+docker-compose up
+```
+
+Starts both the API server (port 8000) and the AgentHansa long-poll loop.
