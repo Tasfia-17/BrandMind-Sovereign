@@ -19,6 +19,7 @@ MODELS = {
     "extraction": "deepseek/deepseek-v3.2",
     "generation": "anthropic/claude-sonnet-4",
     "vision":     "openai/gpt-4o-mini",
+    "embedding": "openai/gpt-4o-mini",
     "audio":      "anthropic/claude-sonnet-4",
     "fast":       "deepseek/deepseek-v4-flash",
 }
